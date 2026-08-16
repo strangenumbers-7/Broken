@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>🔐 Playlist?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .box {
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            background: #222;
+        }
+
+        input {
+            padding: 12px;
+            width: 80%;
+            border-radius: 8px;
+            border: none;
+            margin: 15px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>🔐 Playlist</h1>
+
+    <p>The Moon?...</p>
+
+    <input id="answer" placeholder="Nhập đáp án">
+
+    <br>
+
+    <button onclick="check()">Giải mã</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function check() {
+    const answer = document.getElementById("answer").value;
+
+    if (answer === "Spotify") {
+        document.getElementById("result").innerHTML =
+            '<p>🎵 So easy huh?</p>' +
+            '<a href="https://open.spotify.com/playlist/0xlKKynzXuEn1VvwiwfHkB" target="_blank">' +
+            '👉 Mở Playlist</a>';
+    } else {
+        document.getElementById("result").innerHTML =
+            "❌ Popular music app maybe?.";
+    }
+}
+</script>
+
+</body>
+</html>
